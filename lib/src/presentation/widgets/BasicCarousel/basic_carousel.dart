@@ -25,7 +25,7 @@ class SalesSummaryCard extends StatelessWidget {
             // color: Colors.white,
             borderRadius: BorderRadius.circular(24),
             image: DecorationImage(
-              image: AssetImage('../../../../assets/emblem.png'),
+              image: AssetImage('../../../../assets/images/emblem.png'),
               fit: BoxFit.fitWidth,
             ),
           ),

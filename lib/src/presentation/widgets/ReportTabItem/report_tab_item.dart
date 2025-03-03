@@ -50,7 +50,8 @@ class ReportTabBar extends StatelessWidget implements PreferredSizeWidget {
       labelColor: const Color(0xFF1B1C19),
       unselectedLabelColor: const Color(0xFF777874),
       indicatorColor: const Color(0xFF1B1C19),
-      labelStyle: const TextStyle(fontSize: 20),
+      labelStyle: const TextStyle(fontSize: 18),
+      labelPadding: const EdgeInsets.symmetric(horizontal: 8.0),
     );
   }
 
