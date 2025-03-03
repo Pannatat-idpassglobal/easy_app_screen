@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_app_sreen_reports/themes/colors.dart';
 
 import '../../card_info_row.dart';
+import '../../sale_info_details.dart';
 import 'performance_card_carousel.dart';
 
 class PerformanceResultsScreen extends StatefulWidget {
@@ -28,20 +29,54 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
           SizedBox(
             width: MediaQuery.of(context).size.width,
             child: CardInfo(
-              child: CardInfoRow(
-                title: 'ซิมระบบเติมเงิน',
-                date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                imagePath: '../../../../../../assets/images/AIS-12C.png', // ระบุชื่อไฟล์รูปภาพ
+              child: Column(
+                children: [
+                  CardInfoRow(
+                    title: 'ซิมระบบเติมเงิน',
+                    date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
+                    imagePath:
+                        '../../../../../../assets/images/AIS-12C.png', // ระบุชื่อไฟล์รูปภาพ
+                  ),
+                  SaleInfoDataWidget(
+                    leftLine1:
+                        '', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
+                    leftLine2: 'เปิดเบอร์ใหม่',
+                    leftLine3: 'ขายโปรเสริมภายในวัน',
+                    rightCol1Title: '',
+                    rightCol1Value1: '',
+                    rightCol1Value2: '',
+                    rightCol2Title: 'ซิม',
+                    rightCol2Value1: '27',
+                    rightCol2Value2: '2',
+                  ),
+                ],
               ),
             ),
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width,
             child: CardInfo(
-              child: CardInfoRow(
-                title: 'ซิมระบบรายเดือน',
-                date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                imagePath: '../../../../../../assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+              child: Column(
+                children: [
+                  CardInfoRow(
+                    title: 'ซิมระบบรายเดือน',
+                    date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
+                    imagePath:
+                        '../../../../../../assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+                  ),
+                   SaleInfoDataWidget(
+                    leftLine1:
+                        'จดทะเบียนเบอร์ใหม่', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
+                    leftLine2: 'ย้ายค่ายเบอร์เดิม',
+                    leftLine3: 'เปลี่ยนเติมเงินเป็นรายเดือน',
+                    rightCol1Title: 'รายการ',
+                    rightCol1Value1: '',
+                    rightCol1Value2: '',
+                    rightCol2Title: 'ซิม',
+                    rightCol2Value1: '1',
+                    rightCol2Value2: '2',
+                  ),
+                ],
               ),
             ),
           ),
@@ -53,22 +88,55 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
                   CardInfoRow(
                     title: 'เติมเงินและขายโปรเสริม',
                     date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                    imagePath: '../../../../../../assets/images/chm.iconillus_primary.png', // ระบุชื่อไฟล์รูปภาพ
+                    imagePath:
+                        '../../../../../../assets/images/chm.iconillus_primary.png', // ระบุชื่อไฟล์รูปภาพ
+                  ),
+                  SaleInfoDataWidget(
+                    leftLine1:
+                        '', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
+                    leftLine2: 'เติมเงิน',
+                    leftLine3: 'ขายโปรเสริม',
+                    rightCol1Title: 'รายการ',
+                    rightCol1Value1: '230',
+                    rightCol1Value2: '42',
+                    rightCol2Title: 'บาท',
+                    rightCol2Value1: '4,270',
+                    rightCol2Value2: '2,478',
                   ),
                 ],
+                
               ),
             ),
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width,
             child: CardInfo(
-              child: CardInfoRow(
-                title: 'เอไอเอสไฟเบอร์',
-                date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                imagePath: '../../../../../../assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+              child: Column(
+                children: [
+                  CardInfoRow(
+                    title: 'เอไอเอสไฟเบอร์',
+                    date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
+                    imagePath:
+                        '../../../../../../assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+                  ),
+                  SaleInfoDataWidget(
+                    leftLine1:
+                        '', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
+                    leftLine2: 'ติดตั้งสำเร็จ',
+                    leftLine3: '',
+                    rightCol1Title: '',
+                    rightCol1Value1: '',
+                    rightCol1Value2: '',
+                    rightCol2Title: 'เบอร์',
+                    rightCol2Value1: '0',
+                    rightCol2Value2: '',
+                  ),
+                ],
               ),
             ),
           ),
+                    SizedBox(height: 110),
+
         ]),
       ),
     );
