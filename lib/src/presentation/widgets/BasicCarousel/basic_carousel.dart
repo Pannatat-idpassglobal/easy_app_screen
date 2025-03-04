@@ -25,7 +25,7 @@ class SalesSummaryCard extends StatelessWidget {
             // color: Colors.white,
             borderRadius: BorderRadius.circular(24),
             image: DecorationImage(
-              image: AssetImage('../../../../assets/images/emblem.png'),
+              image: AssetImage('assets/images/emblem.png'),
               fit: BoxFit.fitWidth,
             ),
           ),
@@ -79,7 +79,7 @@ class SalesSummaryCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Image.asset(
-                          '../../../../assets/coin_icon.png', // ไฟล์รูปเหรียญต้องอยู่ใน assets
+                          'assets/coin_icon.png', // ไฟล์รูปเหรียญต้องอยู่ใน assets
                           width: 80,
                           height: 67.5,
                         ),

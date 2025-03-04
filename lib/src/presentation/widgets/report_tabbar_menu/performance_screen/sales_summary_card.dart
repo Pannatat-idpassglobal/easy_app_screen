@@ -18,7 +18,7 @@ class SalesSummaryCard extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(24),
           image: DecorationImage(
-            image: AssetImage('../../../../assets/images/emblem.png'),
+            image: AssetImage('assets/images/emblem.png'),
             fit: BoxFit.fitWidth,
           ),
         ),
@@ -51,7 +51,7 @@ class SalesSummaryCard extends StatelessWidget {
                             'ผลการดำเนินงาน',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 12,
+                              fontSize: 16,
                             ),
                           ),
                         ),
@@ -60,8 +60,8 @@ class SalesSummaryCard extends StatelessWidget {
                           child: Text(
                             'ยอดขายเดือน$monthName',
                             style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w800,
+                              fontSize: 24,
+                              fontWeight: FontWeight.w500,
                               color: Color(0xFF464744),
                             ),
                           ),
@@ -74,7 +74,7 @@ class SalesSummaryCard extends StatelessWidget {
                         child: Positioned(
                           right: 10,
                           child: Image.asset(
-                            '../../../../assets/coin_icon.png',
+                            'assets/coin_icon.png',
                             width: 75,
                             height: 67.5,
                           ),

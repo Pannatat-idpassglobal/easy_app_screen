@@ -18,7 +18,7 @@ class CardInfo extends StatelessWidget {
             color: Color.fromRGBO(255, 255, 255, 1),
             borderRadius: BorderRadius.circular(24),
             image: DecorationImage(
-              image: AssetImage('../../../../assets/images/emblem_v2.png'),
+              image: AssetImage('assets/images/emblem_v2.png'),
               fit: BoxFit.fill,
             ),
             boxShadow: [

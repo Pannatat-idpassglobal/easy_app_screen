@@ -15,6 +15,12 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+buildscript {
+    dependencies {
+        // เปลี่ยนเป็นเวอร์ชันใหม่กว่า
+        classpath "com.android.tools.build:gradle:8.2.1"
+    }
+}
 
 plugins {
     id "dev.flutter.flutter-plugin-loader" version "1.0.0"

@@ -21,7 +21,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
       body: SingleChildScrollView(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           SizedBox(
-            height: 148,
+            height: 154,
             width: MediaQuery.of(context).size.width,
             child: PerformanceCardCarousel(),
           ),
@@ -35,7 +35,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
                     title: 'ซิมระบบเติมเงิน',
                     date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
                     imagePath:
-                        '../../../../../../assets/images/AIS-12C.png', // ระบุชื่อไฟล์รูปภาพ
+                        'assets/images/AIS-12C.png', // ระบุชื่อไฟล์รูปภาพ
                   ),
                   SaleInfoDataWidget(
                     leftLine1:
@@ -62,14 +62,14 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
                     title: 'ซิมระบบรายเดือน',
                     date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
                     imagePath:
-                        '../../../../../../assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+                        'assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
                   ),
-                   SaleInfoDataWidget(
+                  SaleInfoDataWidget(
                     leftLine1:
                         'จดทะเบียนเบอร์ใหม่', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
                     leftLine2: 'ย้ายค่ายเบอร์เดิม',
                     leftLine3: 'เปลี่ยนเติมเงินเป็นรายเดือน',
-                    rightCol1Title: 'รายการ',
+                    rightCol1Title: '',
                     rightCol1Value1: '',
                     rightCol1Value2: '',
                     rightCol2Title: 'ซิม',
@@ -89,7 +89,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
                     title: 'เติมเงินและขายโปรเสริม',
                     date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
                     imagePath:
-                        '../../../../../../assets/images/chm.iconillus_primary.png', // ระบุชื่อไฟล์รูปภาพ
+                        'assets/images/chm.iconillus_primary.png', // ระบุชื่อไฟล์รูปภาพ
                   ),
                   SaleInfoDataWidget(
                     leftLine1:
@@ -104,7 +104,6 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
                     rightCol2Value2: '2,478',
                   ),
                 ],
-                
               ),
             ),
           ),
@@ -117,7 +116,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
                     title: 'เอไอเอสไฟเบอร์',
                     date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
                     imagePath:
-                        '../../../../../../assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+                        'assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
                   ),
                   SaleInfoDataWidget(
                     leftLine1:
@@ -135,8 +134,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
               ),
             ),
           ),
-                    SizedBox(height: 110),
-
+          SizedBox(height: 110),
         ]),
       ),
     );

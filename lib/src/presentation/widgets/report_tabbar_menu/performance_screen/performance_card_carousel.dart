@@ -47,7 +47,7 @@ class _PerformanceCardCarouselState extends State<PerformanceCardCarousel> {
       body: Column(
         children: [
           Container(
-            height: 130,
+            // height: 135,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
@@ -65,7 +65,7 @@ class _PerformanceCardCarouselState extends State<PerformanceCardCarousel> {
                 autoPlay: false,
                 enlargeCenterPage: false,
                 padEnds: true,
-                height: 138,
+                height: 144,
                 reverse: false,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {

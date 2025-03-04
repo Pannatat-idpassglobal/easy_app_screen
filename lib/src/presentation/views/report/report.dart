@@ -53,7 +53,7 @@ class _ReportState extends State<Report> with TickerProviderStateMixin {
         ),
         leading: IconButton(
           icon: Image.asset(
-            '../../../../../assets/icons/arrow_back.png',
+            'assets/icons/arrow_back.png',
             width: 24,
             height: 24,
           ),
@@ -62,7 +62,7 @@ class _ReportState extends State<Report> with TickerProviderStateMixin {
         actions: [
           IconButton(
             icon: Image.asset(
-              '../../../../../assets/icons/home.png',
+              'assets/icons/home.png',
               width: 24,
               height: 24,
             ),
