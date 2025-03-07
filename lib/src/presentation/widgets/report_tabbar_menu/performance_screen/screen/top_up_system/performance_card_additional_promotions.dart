@@ -1,0 +1,76 @@
+import 'package:carousel_slider/carousel_controller.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_app_sreen_reports/src/presentation/widgets/report_tabbar_menu/performance_screen/sales_summary_card.dart';
+import 'package:flutter/material.dart';
+
+import '../../../../card_info_condition.dart';
+import '../../../../card_info_condition_details.dart';
+import '../../../../card_info_top_up.dart';
+import '../../../../dynamic_sale_info.dart';
+
+class PerformanceCardAdditionalPromotions extends StatefulWidget {
+  const PerformanceCardAdditionalPromotions({Key? key}) : super(key: key);
+
+  @override
+  State<PerformanceCardAdditionalPromotions> createState() =>
+      _PerformanceCardAdditionalPromotionsState();
+}
+
+class _PerformanceCardAdditionalPromotionsState
+    extends State<PerformanceCardAdditionalPromotions> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CardInfoCondition(
+              title: 'ขายโปรเสริมภายในวัน',
+              all_sim_numbers: '2',
+              pass_sim_numbers: '2',
+              failed_numbers: '4',
+              imagePath: 'assets/images/chm.iconillus_primary.png',
+            ),
+            DynamicSaleInfoWidget(
+              title: 'สมัครแพ็กเกจเสริมสะสมภายในวัน',
+              items: [
+                SaleItem(label: 'น้อยกว่า 150 บาท', value: 0),
+                SaleItem(label: '150 บาท', value: 0),
+                SaleItem(label: '200 บาท', value: 1),
+                SaleItem(label: '250 บาท', value: 1),
+                SaleItem(label: '300 บาท', value: 0),
+                SaleItem(label: '350 บาทขึ้นไป', value: 0),
+              ],
+            ),
+            SizedBox(
+              height: 48,
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFB3E500), // สีพื้นหลังปุ่ม
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(8)),
+                  ),
+                ),
+                child: Text(
+                  'ดูรายละเอียด',
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        color: const Color.fromRGBO(37, 51, 0, 1),
+                        fontWeight: FontWeight.w700,
+                      ),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

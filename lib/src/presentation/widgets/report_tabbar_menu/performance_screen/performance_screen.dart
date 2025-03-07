@@ -1,4 +1,4 @@
-import 'package:easy_app_sreen_reports/src/presentation/widgets/card/card_info.dart';
+import 'package:easy_app_sreen_reports/src/presentation/widgets/card/card_info_emblem.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_app_sreen_reports/themes/colors.dart';
 
@@ -18,6 +18,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       body: SingleChildScrollView(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           SizedBox(
@@ -28,7 +29,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
           SizedBox(height: 16),
           SizedBox(
             width: MediaQuery.of(context).size.width,
-            child: CardInfo(
+            child: CardInfoEmblem(
               child: Column(
                 children: [
                   CardInfoRow(
@@ -58,7 +59,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width,
-            child: CardInfo(
+            child: CardInfoEmblem(
               child: Column(
                 children: [
                   CardInfoRow(
@@ -88,7 +89,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width,
-            child: CardInfo(
+            child: CardInfoEmblem(
               child: Column(
                 children: [
                   CardInfoRow(
@@ -118,7 +119,7 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width,
-            child: CardInfo(
+            child: CardInfoEmblem(
               child: Column(
                 children: [
                   CardInfoRow(

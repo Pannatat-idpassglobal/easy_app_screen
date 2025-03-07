@@ -38,6 +38,7 @@ flutter:
     - assets/images/emblem_v2.png
     - assets/images/emblem.png
     - assets/coin_icon.png
+    - assets/icons/icon_info_gray.png
 
   fonts:
     - family: DB_HelvethaicaAIS

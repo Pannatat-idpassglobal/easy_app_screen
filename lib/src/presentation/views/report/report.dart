@@ -38,6 +38,7 @@ class _ReportState extends State<Report> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(247, 247, 247, 1),
       appBar: AppBar(
         backgroundColor: Colors.white, // พื้นหลังสีขาว
         elevation: 0, // ปิดเงา AppBar
