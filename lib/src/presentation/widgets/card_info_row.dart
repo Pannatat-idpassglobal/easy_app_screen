@@ -16,9 +16,10 @@ class CardInfoRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding:
+          const EdgeInsets.only(left: 16.0, top: 12, right: 16, bottom: 16),
       child: Container(
-        height: 68,
+        height: 63,
         width: double.infinity,
         decoration: const BoxDecoration(
           border: Border(
@@ -33,8 +34,8 @@ class CardInfoRow extends StatelessWidget {
           children: [
             // รูปด้านซ้าย (แสดงรูปจากพาธ imagePath ที่รับเข้ามา)
             Container(
-              width: 50,
-              height: 50,
+              width: 40,
+              height: 40,
               decoration: BoxDecoration(
                 shape: BoxShape.rectangle,
                 image: DecorationImage(
@@ -43,30 +44,27 @@ class CardInfoRow extends StatelessWidget {
                 ),
               ),
             ),
-            
+
             const SizedBox(width: 8),
-            
+
             // ข้อความตรงกลาง (title และ date)
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start, // จัดให้ตรงกลางแนวตั้ง
+              mainAxisAlignment:
+                  MainAxisAlignment.start, // จัดให้ตรงกลางแนวตั้ง
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    height: 1.4,  // line-height
-                  ),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Color.fromRGBO(37, 51, 0, 1),
+                      fontWeight: FontWeight.w700),
                 ),
                 Text(
                   date,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    color: Color.fromARGB(94, 95, 91, 1),
-                    fontWeight: FontWeight.w700,
-                    height: 1.4,  // line-height
-                  ),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: Color.fromRGBO(94, 95, 91, 1),
+                        fontWeight: FontWeight.w400,
+                      ),
                 ),
               ],
             ),
@@ -74,15 +72,16 @@ class CardInfoRow extends StatelessWidget {
             // ปุ่มลูกศรด้านขวา
             const Spacer(),
             Container(
-              width: 38,
-              height: 38,
+              width: 32,
+              height: 32,
               decoration: BoxDecoration(
-                color: const Color.fromRGBO(184, 244, 22, 1), // สีเขียวอ่อนตามต้องการ
+                color: const Color.fromRGBO(
+                    184, 244, 22, 1), // สีเขียวอ่อนตามต้องการ
                 borderRadius: BorderRadius.circular(10),
               ),
               child: const Icon(
                 Icons.chevron_right,
-                color: Colors.black54,
+                color: Color.fromRGBO(37, 51, 0, 1),
               ),
             ),
           ],

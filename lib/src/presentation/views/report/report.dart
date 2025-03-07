@@ -3,6 +3,7 @@ import 'package:easy_app_sreen_reports/src/presentation/widgets/ReportTabItem/re
 import 'package:easy_app_sreen_reports/src/presentation/widgets/carouselWithIndicator/carousel_indicator.dart';
 import 'package:easy_app_sreen_reports/src/presentation/widgets/report_tabbar_menu/performance_screen/performance_screen.dart';
 import 'package:flutter/material.dart';
+
 class Report extends StatefulWidget {
   const Report({super.key});
 
@@ -47,9 +48,12 @@ class _ReportState extends State<Report> with TickerProviderStateMixin {
             color: Colors.transparent,
           ),
         ),
-        title: const Text(
+        title: Text(
           'รายงาน',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                color: Color.fromRGBO(27, 28, 25, 1),
+                fontWeight: FontWeight.bold,
+              ),
         ),
         leading: IconButton(
           icon: Image.asset(

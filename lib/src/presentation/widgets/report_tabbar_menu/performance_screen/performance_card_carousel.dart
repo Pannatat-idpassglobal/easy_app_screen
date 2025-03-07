@@ -47,7 +47,6 @@ class _PerformanceCardCarouselState extends State<PerformanceCardCarousel> {
       body: Column(
         children: [
           Container(
-            // height: 135,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
@@ -65,7 +64,7 @@ class _PerformanceCardCarouselState extends State<PerformanceCardCarousel> {
                 autoPlay: false,
                 enlargeCenterPage: false,
                 padEnds: true,
-                height: 144,
+                height: 136,
                 reverse: false,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {
@@ -82,8 +81,8 @@ class _PerformanceCardCarouselState extends State<PerformanceCardCarousel> {
               return GestureDetector(
                 onTap: () => _controller.animateToPage(entry.key),
                 child: Container(
-                  width: 10.0,
-                  height: 10.0,
+                  width: 8.0,
+                  height: 8.0,
                   margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 4.0),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,

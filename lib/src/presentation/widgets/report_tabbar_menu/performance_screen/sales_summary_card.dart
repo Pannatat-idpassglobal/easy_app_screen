@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SalesSummaryCard extends StatelessWidget {
@@ -12,7 +11,7 @@ class SalesSummaryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 16,top: 16,right: 16,bottom: 8),
+      padding: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 8),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
@@ -41,29 +40,30 @@ class SalesSummaryCard extends StatelessWidget {
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                               colors: [
-                                Color(0xFFD7FF69),
-                                Color(0xFFCCFF40),
+                                Color.fromRGBO(215, 255, 105, 1),
+                                Color.fromRGBO(204, 255, 64, 1)
                               ],
                             ),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
                             'ผลการดำเนินงาน',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            ),
+                            style:
+                                Theme.of(context).textTheme.bodySmall?.copyWith(
+                                      color: Color.fromRGBO(37, 51, 0, 1),
+                                      fontWeight: FontWeight.bold,
+                                    ),
                           ),
                         ),
-                        SizedBox(height: 16),
+                        SizedBox(height: 8),
                         Container(
                           child: Text(
                             'ยอดขายเดือน$monthName',
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xFF464744),
-                            ),
+                            style:
+                                Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                      color: Color.fromRGBO(70, 71, 68, 1),
+                                      fontWeight: FontWeight.bold,
+                                    ),
                           ),
                         ),
                       ],

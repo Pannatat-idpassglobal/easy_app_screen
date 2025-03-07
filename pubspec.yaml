@@ -36,11 +36,14 @@ flutter:
     - assets/images/AIS-LOGO.png
     - assets/images/chm.iconillus_primary.png
     - assets/images/emblem_v2.png
+    - assets/images/emblem.png
     - assets/coin_icon.png
 
   fonts:
-    - family: DB_Heavent
+    - family: DB_HelvethaicaAIS
       fonts:
-        - asset: assets/fonts/DB_HelvethaicaAIS_X_v3.2.ttf
-        - asset: assets/fonts/DB_HelvethaicaAIS_X_Bd_It_v3.2.ttf
-          style: italic
+      - asset: assets/fonts/DB_HelvethaicaAIS_X_v3.2.ttf
+        weight: 400
+      - asset: assets/fonts/DB_HelvethaicaAIS_X_Bd_v3.2.ttf
+        weight: 700
+        style: normal

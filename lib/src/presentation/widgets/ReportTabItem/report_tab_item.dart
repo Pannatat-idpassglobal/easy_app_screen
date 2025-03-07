@@ -16,7 +16,7 @@ class ReportTabItem extends StatelessWidget {
         mainAxisSize: MainAxisSize.min, // ✅ ป้องกัน Column ขยายเกินขนาด
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
-        children: texts.map((text) => Text(text)).toList(),
+        children: texts.map((text) => Text(text,)).toList(),
       );
     
   }
@@ -50,7 +50,7 @@ class ReportTabBar extends StatelessWidget implements PreferredSizeWidget {
       labelColor: const Color(0xFF1B1C19),
       unselectedLabelColor: const Color(0xFF777874),
       indicatorColor: const Color(0xFF1B1C19),
-      labelStyle: const TextStyle(fontSize: 18),
+      labelStyle: const TextStyle(fontSize: 18,fontWeight: FontWeight.w500),
       labelPadding: const EdgeInsets.symmetric(horizontal: 8.0),
     );
   }
