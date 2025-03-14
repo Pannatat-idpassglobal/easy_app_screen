@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../../../CustomElevatedButton.dart';
 import '../../../../card/card_info.dart';
 import '../../../../card/card_info_emblem.dart';
 import '../../../../card_info_condition.dart';
+import 'journey_01/journey_01.dart';
 import 'performance_card_additional_promotions.dart';
 import 'performance_card_condition.dart';
 import 'performance_card_top_up.dart';
@@ -78,8 +80,17 @@ class _TopUpSystemState extends State<TopUpSystem> {
               // height: 232,
               width: MediaQuery.of(context).size.width,
               child: CardInfo(
-                child: Column(
-                  children: [PerformanceCardCondition()],
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      PerformanceCardCondition(),
+                      CustomElevatedButton(
+                        text: 'ดูรายละเอียด jey 1',
+                        step: Journey01(),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

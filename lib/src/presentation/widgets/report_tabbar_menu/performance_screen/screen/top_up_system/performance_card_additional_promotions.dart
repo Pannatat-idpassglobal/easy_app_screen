@@ -28,9 +28,8 @@ class _PerformanceCardAdditionalPromotionsState
           children: [
             CardInfoCondition(
               title: 'ขายโปรเสริมภายในวัน',
-              all_sim_numbers: '2',
-              pass_sim_numbers: '2',
-              failed_numbers: '4',
+              allSimNumbers: '2',
+              passSimNumbers: '2',
               imagePath: 'assets/images/chm.iconillus_primary.png',
             ),
             DynamicSaleInfoWidget(
