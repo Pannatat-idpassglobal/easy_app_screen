@@ -43,30 +43,6 @@ class _PerformanceCardAdditionalPromotionsState
                 SaleItem(label: '350 บาทขึ้นไป', value: 0),
               ],
             ),
-            SizedBox(
-              height: 48,
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFB3E500), // สีพื้นหลังปุ่ม
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                    vertical: 12,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                  ),
-                ),
-                child: Text(
-                  'ดูรายละเอียด',
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: const Color.fromRGBO(37, 51, 0, 1),
-                        fontWeight: FontWeight.w700,
-                      ),
-                ),
-              ),
-            )
           ],
         ),
       ),

@@ -7,6 +7,7 @@ class CardInfoRow extends StatelessWidget {
   final String imagePath;
   // parameter onTap เพื่อรับฟังก์ชันเมื่อกด
   final VoidCallback? onTap;
+  final Widget child;
 
   // Constructor เพื่อรับค่าจากภายนอก
   const CardInfoRow({
@@ -14,6 +15,7 @@ class CardInfoRow extends StatelessWidget {
     required this.title,
     required this.date,
     required this.imagePath,
+    required this.child,
     this.onTap,
   }) : super(key: key);
 
@@ -81,7 +83,7 @@ class CardInfoRow extends StatelessWidget {
                     Navigator.of(context).push(
                       PageRouteBuilder(
                         pageBuilder: (context, animation, secondaryAnimation) =>
-                            const TopUpSystem(),
+                            child,
                         transitionsBuilder:
                             (context, animation, secondaryAnimation, child) {
                           const begin = Offset(1.0, 0.0); // เริ่มจากขวา

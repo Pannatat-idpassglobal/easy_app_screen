@@ -5,18 +5,19 @@ import '../../../../card/card_info.dart';
 import '../../../../card/card_info_emblem.dart';
 import '../../../../card_info_condition.dart';
 import 'journey_01/journey_01.dart';
+import 'journey_02/journey_02.dart';
 import 'performance_card_additional_promotions.dart';
 import 'performance_card_condition.dart';
 import 'performance_card_top_up.dart';
 
-class TopUpSystem extends StatefulWidget {
-  const TopUpSystem({super.key});
+class SimPrePaidScreen extends StatefulWidget {
+  const SimPrePaidScreen({super.key});
 
   @override
-  State<TopUpSystem> createState() => _TopUpSystemState();
+  State<SimPrePaidScreen> createState() => _SimPrePaidScreenState();
 }
 
-class _TopUpSystemState extends State<TopUpSystem> {
+class _SimPrePaidScreenState extends State<SimPrePaidScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,8 +99,17 @@ class _TopUpSystemState extends State<TopUpSystem> {
               // height: 232,
               width: MediaQuery.of(context).size.width,
               child: CardInfo(
-                child: Column(
-                  children: [PerformanceCardAdditionalPromotions()],
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: [
+                      PerformanceCardAdditionalPromotions(),
+                      CustomElevatedButton(
+                        text: 'ดูรายละเอียด jey 2',
+                        step: Journey02(),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

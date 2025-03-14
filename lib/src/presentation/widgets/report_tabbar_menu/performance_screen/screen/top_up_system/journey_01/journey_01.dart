@@ -1,41 +1,261 @@
 import 'package:flutter/material.dart';
 import '../../../../../ExpandableDetailTable.dart';
 import '../../../../../card/card_info.dart';
+import '../CardInfoSection.dart';
 import '../performance_card_condition.dart';
 
-class Journey01 extends StatelessWidget {
+class Journey01 extends StatefulWidget {
   Journey01({super.key});
 
-  final List<Map<String, dynamic>> dataMock = [
-    {"date": "13", "total": 5, "passed": 5, "failed": 0, "details": []},
-    {"date": "12", "total": 6, "passed": 6, "failed": 0, "details": []},
-    {"date": "11", "total": 5, "passed": 5, "failed": 0, "details": []},
-    {"date": "10", "total": 4, "passed": 4, "failed": 0, "details": []},
+  @override
+  _Journey01State createState() => _Journey01State();
+}
+
+class _Journey01State extends State<Journey01> {
+  int? expandedIndex;
+  final List<Map<String, dynamic>> dataList = [
     {
-      "date": "9",
-      "total": 5,
-      "passed": 3,
-      "failed": 2,
+      "date": "1",
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
       "details": [
+        {"number": "097391977", "status": "ไม่ผ่านเงื่อนไข", "simType": "ZEED"},
         {
-          "number": "094XXXXXX55",
-          "status": "ผ่านเงื่อนไข",
+          "number": "091946661",
+          "status": "ไม่ผ่านเงื่อนไข",
           "simType": "THE ONE"
         },
+        {"number": "091433813", "status": "ผ่านเงื่อนไข", "simType": "ZEED"}
+      ]
+    },
+    {
+      "date": "2",
+      "total": 2,
+      "passed": 1,
+      "failed": 1,
+      "details": [
         {
-          "number": "094XXXXXX56",
-          "status": "ไม่ผ่านเงื่อนไข",
-          "simType": "ZEED"
-        },
-        {
-          "number": "094XXXXXX57",
+          "number": "096906889",
           "status": "ไม่ผ่านเงื่อนไข",
           "simType": "Super Social"
         },
+        {"number": "099643371", "status": "ผ่านเงื่อนไข", "simType": "THE ONE"}
       ]
     },
-    {"date": "8", "total": 1, "passed": 1, "failed": 0, "details": []},
-    {"date": "7", "total": 1, "passed": 0, "failed": 1, "details": []},
+    {"date": "3", "total": 0, "passed": 0, "failed": 0, "details": []},
+    {
+      "date": "4",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "details": [
+        {
+          "number": "093721755",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "Net Marathon"
+        },
+        {"number": "091034968", "status": "ไม่ผ่านเงื่อนไข", "simType": "ZEED"},
+        {
+          "number": "093908926",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        },
+        {
+          "number": "098868435",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "Net Marathon"
+        }
+      ]
+    },
+    {
+      "date": "5",
+      "total": 2,
+      "passed": 0,
+      "failed": 2,
+      "details": [
+        {
+          "number": "096938932",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        },
+        {
+          "number": "097496019",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        }
+      ]
+    },
+    {
+      "date": "6",
+      "total": 5,
+      "passed": 4,
+      "failed": 1,
+      "details": [
+        {"number": "098155575", "status": "ผ่านเงื่อนไข", "simType": "ZEED"},
+        {
+          "number": "099734374",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "MAX SPEED"
+        },
+        {"number": "093113830", "status": "ผ่านเงื่อนไข", "simType": "THE ONE"},
+        {"number": "099048239", "status": "ไม่ผ่านเงื่อนไข", "simType": "ZEED"},
+        {
+          "number": "095278143",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "Net Marathon"
+        }
+      ]
+    },
+    {
+      "date": "7",
+      "total": 4,
+      "passed": 2,
+      "failed": 2,
+      "details": [
+        {
+          "number": "096683879",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "MAX SPEED"
+        },
+        {
+          "number": "097759724",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "MAX SPEED"
+        },
+        {
+          "number": "096857981",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "MAX SPEED"
+        },
+        {"number": "094122032", "status": "ผ่านเงื่อนไข", "simType": "THE ONE"}
+      ]
+    },
+    {
+      "date": "8",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "details": [
+        {"number": "090392142", "status": "ไม่ผ่านเงื่อนไข", "simType": "ZEED"},
+        {
+          "number": "094034922",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "MAX SPEED"
+        }
+      ]
+    },
+    {
+      "date": "9",
+      "total": 4,
+      "passed": 3,
+      "failed": 1,
+      "details": [
+        {"number": "092741117", "status": "ไม่ผ่านเงื่อนไข", "simType": "ZEED"},
+        {"number": "099169615", "status": "ผ่านเงื่อนไข", "simType": "ZEED"},
+        {
+          "number": "098090183",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "MAX SPEED"
+        },
+        {
+          "number": "093846721",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        }
+      ]
+    },
+    {
+      "date": "10",
+      "total": 4,
+      "passed": 1,
+      "failed": 3,
+      "details": [
+        {
+          "number": "092129394",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        },
+        {"number": "093467797", "status": "ไม่ผ่านเงื่อนไข", "simType": "ZEED"},
+        {"number": "096013354", "status": "ไม่ผ่านเงื่อนไข", "simType": "ZEED"},
+        {
+          "number": "098535769",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        }
+      ]
+    },
+    {
+      "date": "11",
+      "total": 2,
+      "passed": 0,
+      "failed": 2,
+      "details": [
+        {"number": "090474153", "status": "ผ่านเงื่อนไข", "simType": "THE ONE"},
+        {
+          "number": "091705454",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "THE ONE"
+        }
+      ]
+    },
+    {
+      "date": "12",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "details": [
+        {"number": "096661662", "status": "ผ่านเงื่อนไข", "simType": "THE ONE"},
+        {
+          "number": "096229230",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        },
+        {
+          "number": "094393791",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "MAX SPEED"
+        }
+      ]
+    },
+    {"date": "13", "total": 0, "passed": 0, "failed": 0, "details": []},
+    {
+      "date": "14",
+      "total": 4,
+      "passed": 1,
+      "failed": 3,
+      "details": [
+        {
+          "number": "092507827",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "Net Marathon"
+        },
+        {"number": "092506558", "status": "ผ่านเงื่อนไข", "simType": "ZEED"},
+        {
+          "number": "097051533",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        },
+        {
+          "number": "093069719",
+          "status": "ไม่ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        }
+      ]
+    },
+    {
+      "date": "15",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "details": [
+        {
+          "number": "099545739",
+          "status": "ผ่านเงื่อนไข",
+          "simType": "Super Social"
+        }
+      ]
+    },
   ];
 
   @override
@@ -91,101 +311,8 @@ class Journey01 extends StatelessWidget {
             const SizedBox(height: 8),
 
             /// ✅ **เพิ่มส่วนของ ListView.builder ที่แก้ไขแล้ว**
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              child: CardInfo(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "รายระเอียด",
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: const Color.fromRGBO(27, 28, 25, 1),
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      SizedBox(height: 8),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(246, 246, 246, 1), // เปลี่ยนสีพื้นหลังเป็นสีฟ้า
-                          borderRadius:
-                              BorderRadius.circular(10), // ทำให้มีขอบโค้ง
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text(
-                                "ข้อมูล ณ วันที่",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall
-                                    ?.copyWith(
-                                        color: Color.fromRGBO(70, 71, 68, 1),
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: 0),
-                              ),
-                              Text(
-                                "จำนวนเบอร์\n(เบอร์)",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall
-                                    ?.copyWith(
-                                        color: Color.fromRGBO(70, 71, 68, 1),
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: 0),
-                                textAlign:
-                                    TextAlign.center, // จัดกึ่งกลาง (ถ้าต้องการ)
-                              ),
-                              Text(
-                                "ผ่านเงื่อนไข",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall
-                                    ?.copyWith(
-                                        color: Color.fromRGBO(70, 71, 68, 1),
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: 0),
-                              ),
-                              Text(
-                                "ไม่ผ่านเงื่อนไข",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodySmall
-                                    ?.copyWith(
-                                        color: Color.fromRGBO(70, 71, 68, 1),
-                                        fontWeight: FontWeight.w400,
-                                        letterSpacing: 0),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      ListView.builder(
-                        itemCount: dataMock.length,
-                        shrinkWrap: true, // ให้ ListView ปรับขนาดตามเนื้อหา
-                        physics:
-                            const NeverScrollableScrollPhysics(), // ป้องกันการเลื่อนซ้อนกัน
-                        itemBuilder: (context, index) {
-                          return ExpandableDetailTable(
-                            dateInfo: dataMock[index]["date"],
-                            totalNumbers: dataMock[index]["total"],
-                            passed: dataMock[index]["passed"],
-                            failed: dataMock[index]["failed"],
-                            details: List<Map<String, String>>.from(
-                                dataMock[index]["details"] ?? []),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+            CardInfoSection(
+              dataList: dataList
             ),
 
             const SizedBox(height: 55),

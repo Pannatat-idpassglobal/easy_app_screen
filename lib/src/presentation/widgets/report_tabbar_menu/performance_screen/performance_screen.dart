@@ -1,10 +1,14 @@
 import 'package:easy_app_sreen_reports/src/presentation/widgets/card/card_info_emblem.dart';
+import 'package:easy_app_sreen_reports/src/presentation/widgets/report_tabbar_menu/performance_screen/screen/top_up_system/journey_01/journey_01.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_app_sreen_reports/themes/colors.dart';
 
 import '../../card_info_row.dart';
 import '../../sale_info_details.dart';
 import 'performance_card_carousel.dart';
+import 'screen/sim_postpaid_screen/sim_postpaid_screen.dart';
+import 'screen/top_up_system/journey_02/journey_02.dart';
+import 'screen/top_up_system/top_up_system.dart';
 
 class PerformanceResultsScreen extends StatefulWidget {
   const PerformanceResultsScreen({super.key});
@@ -18,7 +22,6 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SingleChildScrollView(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           SizedBox(
@@ -33,11 +36,11 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
               child: Column(
                 children: [
                   CardInfoRow(
-                    title: 'ซิมระบบเติมเงิน',
-                    date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                    imagePath:
-                        'assets/images/AIS-12C.png', // ระบุชื่อไฟล์รูปภาพ
-                  ),
+                      title: 'ซิมระบบเติมเงิน',
+                      date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
+                      imagePath:
+                          'assets/images/AIS-12C.png', // ระบุชื่อไฟล์รูปภาพ
+                      child: SimPrePaidScreen()),
                   SaleInfoDataWidget(
                     leftLine1:
                         '', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
@@ -63,11 +66,11 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
               child: Column(
                 children: [
                   CardInfoRow(
-                    title: 'ซิมระบบรายเดือน',
-                    date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                    imagePath:
-                        'assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
-                  ),
+                      title: 'ซิมระบบรายเดือน',
+                      date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
+                      imagePath:
+                          'assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+                      child: SimPostPaidScreen()),
                   SaleInfoDataWidget(
                     leftLine1:
                         '', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
@@ -93,11 +96,11 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
               child: Column(
                 children: [
                   CardInfoRow(
-                    title: 'เติมเงินและขายโปรเสริม',
-                    date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                    imagePath:
-                        'assets/images/chm.iconillus_primary.png', // ระบุชื่อไฟล์รูปภาพ
-                  ),
+                      title: 'เติมเงินและขายโปรเสริม',
+                      date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
+                      imagePath:
+                          'assets/images/chm.iconillus_primary.png', // ระบุชื่อไฟล์รูปภาพ
+                      child: Journey01()),
                   SaleInfoDataWidget(
                     leftLine1:
                         '', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
@@ -123,11 +126,11 @@ class _PerformanceResultsScreenState extends State<PerformanceResultsScreen> {
               child: Column(
                 children: [
                   CardInfoRow(
-                    title: 'เอไอเอสไฟเบอร์',
-                    date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
-                    imagePath:
-                        'assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
-                  ),
+                      title: 'เอไอเอสไฟเบอร์',
+                      date: 'ข้อมูล ณ วันที่ 24 พ.ย. 67',
+                      imagePath:
+                          'assets/images/AIS-LOGO.png', // ระบุชื่อไฟล์รูปภาพ
+                      child: Journey01()),
                   SaleInfoDataWidget(
                     leftLine1:
                         '', // หรือจะไม่ส่งก็ได้ถ้าตั้งค่า default เป็น ''
